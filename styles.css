@@ -1,0 +1,212 @@
+/* Flexbox Part 1 */
+
+#flex-section1 ul 
+	.box nav ul { 
+		display: flex; /*arrange children in a row*/
+		justify-content: space-between; /*evenly distribute space*/
+		padding: 0;/*remove default padding*/
+		list-style: none;/* remove default list styling */
+  	}	
+
+	.box nav ul {
+		display: flex; /*arrange children in a row*/
+		justify-content: space-around; /*evenly distribute space around and between buttons*/
+		padding: 0; /*remove default padding*/
+		list-style: none; /*remove bullet points*/
+	  }
+  
+	.box nav li {
+		margin: 0px; /*remove default margin*/
+	  }
+	  
+	.box nav a {
+		text-decoration: none; /*remove underlines from links*/
+		padding: 10px 20px; /*add padding*/
+		color: #ffffff; /*white text*/
+		background-color: #d534db; /*pink button*/
+		border-radius: 5px; /*rounded corners*/
+	  }
+
+
+/* end Flexbox Part 1 */
+
+
+/* Flexbox Part 2 */
+
+/* Style for the <ul> element inside .box nav */
+/*this section took me a while to figure out because of the flex-section syntax*/
+#flex-section2 .box nav ul {
+	display: flex;
+	flex-wrap: wrap; /* Allow items to wrap to the next row if needed */
+	justify-content: space-around; /*evenly distribute space around boxes*/
+	padding: 0;
+	list-style: none;
+  }
+  
+  /* Style for <li> elements inside .box nav */
+  #flex-section2 .box nav li {
+	flex: 1; /* columns are equal */
+	background-color: #bebebe; /* Background color */
+	margin: 0px; /* setting to zero removes space between boxes*/
+	padding: 15px; /* Add padding for content within columns */
+  }
+  
+  /* Rearranging each section */
+  #flex-section2 .item1 { order: 1; } /* set to first column */
+  #flex-section2 .item2 { order: 3; } /* set to third column */
+  #flex-section2 .item3 { order: 2; } /* set to second column */
+/* end Flexbox Part 2 */
+
+
+/* Flexbox Part 3 */
+
+	#flex-section3 .box {
+	  display: flex;
+	  align-items: center; /* Center vertically */
+	  justify-content: center; /* Center horizontally */
+	}
+	
+	/* Styling the list of words as tags */
+	#flex-section3 .card {
+	  text-align: center;
+	}
+	
+	
+	#flex-section3 .tags ul {
+	padding: 0;
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap; /*wrap tags to the next line*/
+	gap: 2px; /* Adjust the gap between tags */
+  }
+  
+  	#flex-section3 .tags li {
+	background-color: #f707c3;
+	color: #ffffff;
+	margin: 1px;
+	padding: 5px 10px;
+	border-radius: 5px;
+  }
+/* end Flexbox Part 3 */
+
+
+/* Grid Part 1 */
+
+#grid-section1 .box .grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* Create 4 evenly sized columns */
+	gap: 20px; /* Set a 20px gap between columns and rows */
+  }
+  
+  /* Style for each grid item */
+  #grid-section1 .box .grid .greybox {
+	background-color: #f0f0f0;
+	padding: 20px;
+	text-align: center;
+  }
+  
+  /* Additional styling for specific grid items */
+  #grid-section1 .box .grid .greybox:nth-child(odd) {
+	background-color: #f0f0f0;
+	color: #000000;
+  }
+
+
+
+/* end Grid Part 1 */
+
+
+/* Grid Part 2 */
+
+	#grid-section2 .box .grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		gap: 20px;
+		height: 100%; /* Ensure the grid takes up the full height of the parent container */
+	}
+	#grid-section2 .box .grid .gridboxblue {
+		grid-column: 2/ span 2; /* Start at column 1 and span 2 columns */
+		grid-row: 1 / span 3; /* span 2 rows */
+		background-color: #1a08c4;
+		color: #ffffff;
+		opacity: 0.7;
+		padding: 20px;
+		text-align: center;
+		/*aspect-ratio: 1/1; /*maintain 1:1 ratio*/
+		z-index: 1;
+	}
+	#grid-section2 .box .grid .gridboxred {
+		grid-column: 1 / span 2; /* Start at column 1 and span 2 columns */
+		grid-row: 2; /* start at row 2 */
+		background-color: #e90000;
+		padding: 20px;
+		opacity: 0.7;
+		text-align: left;
+	}
+
+/* end Grid Part 2 */
+
+
+/* Grid Part 3 */
+
+#grid-section3 .box .grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr; /* 2 column grid with the first column twice the width of the second */
+	grid-template-rows: 100px 300px 100px; /* Rows with specified heights */
+	gap: 10px; /* 10px gap between rows and columns */
+  }
+  
+
+  #grid-section3 .box .grid .greybox {
+	background-color: #f0f0f0;
+	padding: 20px;
+	text-align: left;
+  }
+  
+  #grid-section3 .box .grid .box1 {
+	grid-column: span 2; /* Box One spans both columns */
+	text-align: left;
+  }
+  
+  #grid-section3 .box .grid .box3 {
+	text-align: left;
+  }
+
+  #grid-section3 .box .grid .box2 {
+	grid-row: 2; /* Box Three spans two rows */
+	grid-column: 2 / span 1;
+	text-align: left;
+
+  }
+  
+
+  #grid-section3 .box .grid .box4 {
+	grid-row: 3; /* Box Four is in the third row */
+	grid-column: span 2; /*... and spans two columns*/
+	text-align: left;
+
+  }
+
+/* end Grid Part 3 */
+
+
+/* Transition Part */
+
+#transition-section .box a {
+	background-color: #e977da;
+	color: #f5f4ef;
+	padding: 10px 20px;
+	text-decoration: none;
+	transition: background-color 0.5s, color 0.5s; /* Add transition for background color and text color with a 0.5s duration */
+  }
+  
+
+  #transition-section .box a:hover {
+	background-color: #f5f4ef;
+	color: #e977da;
+	transition: background-color 3s, color 3s; /* Add transition for background color and text color with a 3s duration */
+  }
+
+/* end Transition Part */
+
