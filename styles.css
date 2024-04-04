@@ -1,0 +1,118 @@
+
+/* Custom CSS styling for the tip calculator form */
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+@font-face {
+    font-family: 'Cute';
+    src: url('Sunshiney.ttf') format('truetype'); /* Cute bubble font.  It is important to type full name of format, or it won't work.  Spent waaaaaaaaay too much time on this 😆 but it was satisfying AF when it worked. */  
+   }
+    
+  /* A note to future self...  Don't waste precious time trying to get little things to work.  See what had happend was... The font I really, really wanted -- AGETA -- used an image for the period symbol.  Obvi, that wasn't going to fly with this project.  It looked SOOOO CUTE!  and fit the aesthetic perfectly.  I tried all sorts of ways to replace the character with a period from a different font, but it didn't end up being worth it.  i may try to tinker with it after the deadline. */
+  /* That being said, I learned a lot.  Now back to the program */
+
+ /* Add Hello Kitty picture in the background */
+body {
+    font-family: 'Cute';
+    font-size: 16px; /* base font size */
+    background-image: url('HK2.jpg'); /* Hello Kitty image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 0.75;
+  }
+
+  /* Center Header */
+  h1 {
+    text-align: center; 
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  /* Input Fields */
+  input[type="number"],
+  input[type="text"],
+  input[type="range"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #C19BF9;
+  }
+  
+  input[type="range"] {
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background-color: #F9F6DE;
+    border-radius: 5px;
+  }
+
+  /* Slider */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background-color: #C2EF5B;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background-color: #C2EF5B;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  input[type="range"] {
+    /* Base styles for the slider */
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background-color: #F9F6DE;
+    border-radius: 5px;
+  }
+  
+  input[type="range"] {
+    /* Base styles for the slider */
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background-color: #F9F6DE;
+    border-radius: 5px;
+    transition: background-color 1.0s ease; /* Add a transition for smooth color change */
+  }
+  
+  /* Change the color of the slider track on hover */
+  input[type="range"]:hover::-webkit-slider-runnable-track {
+    background-color: #C19BF9; /* Change to your desired hover color */
+    transition: background-color 1.0s ease;
+  }
+  
+  /* Change the color of the slider track when active */
+  input[type="range"]:active::-webkit-slider-runnable-track {
+    background-color: #c46cff; /* Change to your desired active color */
+    transition: background-color 1.0s ease;
+  }
+  input[type="number"]:disabled,
+  input[type="text"]:disabled,
+  input[type="range"]:disabled {
+    background-color: #8a8a8a;
+    color: #ffffff;
+  }
+
+#results {
+    display: none;
+}
